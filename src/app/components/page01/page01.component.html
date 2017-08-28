@@ -1,0 +1,38 @@
+<div class="box-flex box-page01">
+  <div class="box-ct">
+    <div *ngIf="true" class="box-flex-item">
+      <h3>
+        {{pageData.title}}
+      </h3>
+      <input ctrlLog type="text" name="" id="">
+    </div>
+    <div *ngIf="false" class="box-flex-item">
+      {{pageData.content}}
+    </div>
+    <ul class="box-flex">
+      <li class="box-flex-item" (click)="onClick(obj2nd)">
+        <div *ngIf="isShowChk; then myChk else myRad"></div>
+      </li>
+      <li class="box-flex-item">
+        title
+      </li>
+      <li class="box-flex-item">
+        name
+      </li>
+    </ul>
+
+
+    <!-- <div *ngIf="true; then myIf else myElse">lalala</div> -->
+  </div>
+  <div #obj2nd class="box-ct">
+    <h3>This is title for 2nd</h3>
+  </div>
+</div>
+
+<ng-template #myChk>
+  <input type="checkbox" name="" id="">
+</ng-template>
+
+<ng-template #myRad>
+  <input type="radio" name="" id="">
+</ng-template>
