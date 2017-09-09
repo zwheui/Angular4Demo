@@ -1,0 +1,44 @@
+.meetingcontent{
+    height: 100%;
+    width:100%;  
+}
+
+.meetingcontent .iconlist{
+    height: 100px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    text-align: center;
+}
+
+.meetingcontent .iconlist .icon{
+    width: 33%;
+    float: left;
+}
+
+.meetingcontent .iconlist .icon .last-icon{
+    color: #D84C2B;
+    font-size: 425%;
+    margin-left: 5%;
+    margin-right: 4%;
+    margin-bottom: 5%;
+}
+
+.meetingcontent .iconlist .icon .last-icon:hover{
+    color:#9D0101;
+}
+
+.meetingcontent .iconlist .icon .myCalendar {
+    font-size: 1em;
+}
+
+.meetingcontent .iconlist .icon .calendar-text {
+    margin-top: .3em;
+}
+
+.meetingcontent .menucontent{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+:host(app-welcome) { width:100%; }

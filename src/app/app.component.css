@@ -1,0 +1,20 @@
+.mainbox{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.parent{
+    display:flex;
+    width:100%;
+}
+.dynamic{
+    display: flex;
+
+}
+.fix{
+    display: flex;
+    border-left: solid red 1px;
+    height: 100%;
+    min-height: 670px;
+    width:100%;
+}
+
