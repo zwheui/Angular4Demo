@@ -1,7 +1,7 @@
 <div class="container-fluid mainbox">
   <app-header (oBarClick)="onClick_HeaderBar()"></app-header>
   <div class="parent">
-    <div class="dynamic" [hidden]="menushow" [@menuAnimation]="menushow.toString()" >
+    <div class="dynamic"  [@menuAnimation]="menushow.toString()" >
         <app-menu></app-menu>
     </div>
     <div class="fix">
