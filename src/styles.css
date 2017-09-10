@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+.contentTitle{
+    padding-left: 50px;
+    padding-right: 20px;
+    padding-top: 50px;
+    font-size: 30px;
+    color: #D84C2B;
+    
+}
+
+.contentTitle .contentText{
+    font-size:23px;
+    color:black;
+}

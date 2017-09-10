@@ -1,0 +1,79 @@
+<nav class="navbar navbar-default navpadding">
+  <div class="contain-fluid red-background">
+    <div class="navbar-header"> 
+    <div>
+        <a routerLink="/welcome" class="navbar-brand logo">
+            <img class="logo" src="../../assets/pwclogo.png"/>
+        </a>
+        <a (click)="onClick()" id="menu-toggle" class="navbar-brand white-color">
+            <i class="fa fa-bars"></i>
+          </a>
+    </div>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right ulpadding">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"> <span class="white-color">Xiao Liu<span class="caret"></span></span></a>
+          <ul class="dropdown-menu">
+              <li>
+                  <a href="">Setting</a>
+                </li>
+                <li>
+                  <a href="">Personal Meeting</a>
+                </li>
+                <li>
+                  <a href="">Desktop Tools</a>
+                </li>
+                <li>
+                  <a href="">Schedule For </a>
+                </li>
+                <li>
+                  <a href="">Webex</a>
+                </li>
+                <li>
+                  <a href="">Audio Config</a>
+                </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- <div class="header">
+  <a href="../../index.html"> 
+    <img class="logo" src="../../assets/pwclogo.png"/>
+  </a>
+  <a href="javascript: void(0)" class="btn btn-default menu-toggle">
+    <i class="fa fa-bars"></i>
+  </a>
+  <a (click)="OnNavTop()" class="loginname">
+    Xiao Liu
+  </a>
+</div>
+<div *ngIf="!showNavTop;else navtop"></div>
+<ng-template #navtop>
+<div class="navtop">
+  <ul>
+        <li>
+          <a href="">Setting</a>
+        </li>
+        <li>
+          <a href="">Personal Meeting</a>
+        </li>
+        <li>
+          <a href="">Desktop Tools</a>
+        </li>
+        <li>
+          <a href="">Schedule For </a>
+        </li>
+        <li>
+          <a href="">Webex</a>
+        </li>
+        <li>
+          <a href="">Audio Config</a>
+        </li>
+      </ul>
+</div>
+</ng-template> -->

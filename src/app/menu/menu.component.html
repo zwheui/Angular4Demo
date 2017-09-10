@@ -1,0 +1,29 @@
+<div class="menu">
+<div class="panel-group">
+    <div *ngFor="let menu of menuObj" class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <a data-toggle="collapse" href="#{{ menu.url }}" >{{ menu.name }}</a>
+        </h3>
+      </div>
+      <div id="{{ menu.url }}"  class="panel-collapse collapse">
+          <ul class="list-group">
+            <li class="list-group-item" *ngFor="let submenu of menu.items">
+              <div *ngIf="submenu.type=='title';then menutitle else menulink">
+              </div>
+              <ng-template #menutitle >
+                <span class="menutitle">
+                  {{ submenu.name }}
+                </span>
+                </ng-template>
+                <ng-template #menulink>
+                  <span class="menulink">
+                  <a routerLink="/{{ submenu.url }}">{{ submenu.name }}</a>
+                  </span>
+                </ng-template>
+            </li>
+          </ul>
+      </div>
+    </div>
+  </div>
+</div>

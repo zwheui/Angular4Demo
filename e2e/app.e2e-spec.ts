@@ -1,14 +1,14 @@
-import { AppPage } from './app.po';
+import { MeetingCenterPage } from './app.po';
 
-describe('angular4-demo App', () => {
-  let page: AppPage;
+describe('meeting-center App', () => {
+  let page: MeetingCenterPage;
 
   beforeEach(() => {
-    page = new AppPage();
+    page = new MeetingCenterPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+    expect(page.getParagraphText()).toEqual('app works!');
   });
 });
