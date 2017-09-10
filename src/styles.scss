@@ -1,3 +1,4 @@
+@import "~font-awesome/css/font-awesome.min.css";
 /* You can add global styles to this file, and also import other style files */
 html {
     body {
@@ -23,6 +24,14 @@ html {
             // flex-basis: 
             // width: 
             // margin:
+            padding: 15x;
+            // background-color: red;
+        }
+        .box-flex-head{
+            display: flex;
+            background-color:#D84C2B;
+            height: 50px;
+            justify-content: flex-start;
         }
         .box-flex-item {
             flex: 1;
