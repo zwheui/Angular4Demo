@@ -1,5 +1,6 @@
 {
     "name": "angular4-demo",
+    "homepage": "https://zwheui.github.io/Angular4Demo",
     "version": "0.0.0",
     "license": "MIT",
     "scripts": {
@@ -8,7 +9,8 @@
         "build": "ng build",
         "test": "ng test",
         "lint": "ng lint",
-        "e2e": "ng e2e"
+        "e2e": "ng e2e",
+        "deploy": "ng build --bh /Angular4Demo/ --prod --aot=false && gh-pages -d dist"
     },
     "private": true,
     "dependencies": {
@@ -35,6 +37,7 @@
         "@types/jasminewd2": "~2.0.2",
         "@types/node": "~6.0.60",
         "codelyzer": "~3.1.1",
+        "gh-pages": "^1.0.0",
         "jasmine-core": "~2.6.2",
         "jasmine-spec-reporter": "~4.1.0",
         "karma": "~1.7.0",
