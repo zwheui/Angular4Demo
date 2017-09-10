@@ -7,6 +7,7 @@ import { CtrlLogDirective } from './directives/ctrl-log.directive';
 import { CtrlBGColorDirective } from './directives/ctrl-bgcolor.directive';
 import { CtrlHideDirective } from './directives/ctrl-hide.directive';
 import { Page02Component } from './components/page02/page02.component';
+import { MynavComponent } from './components/mynav/mynav.component';
 
 const routes: Routes = [
   {
@@ -35,6 +36,7 @@ export const routingComponents = [
   Page02Component,
   MyHeaderComponent,
   MyFooterComponent,
+  MynavComponent,
   CtrlLogDirective,
   CtrlBGColorDirective,
   CtrlHideDirective

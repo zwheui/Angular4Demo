@@ -1,38 +1,56 @@
-<div class="box-flex box-page01">
-  <div class="box-ct">
-    <div *ngIf="true" class="box-flex-item">
-      <h3>
-        {{pageData.title}}
-      </h3>
-      <input ctrlLog type="text" name="" id="">
+<!-- <div class="box-flex box-page01">
+  <form>
+    <div>
+      Name<input type="text" value="">
     </div>
-    <div *ngIf="false" class="box-flex-item">
-      {{pageData.content}}
+    <div>
+      Sex<input type="text" value="">
     </div>
-    <ul class="box-flex">
-      <li class="box-flex-item" (click)="onClick(obj2nd)">
-        <div *ngIf="isShowChk; then myChk else myRad"></div>
-      </li>
-      <li class="box-flex-item">
-        title
-      </li>
-      <li class="box-flex-item">
-        name
-      </li>
-    </ul>
-
-
-    <!-- <div *ngIf="true; then myIf else myElse">lalala</div> -->
+    <div>
+        Email<input type="text" value="">
+    </div>
+    <div>
+        City<input type="text" value="">
+    </div>
+    <div>
+      <input type="submit" value="submit">
+    </div>
+  </form>
+</div> -->
+<div class="box-page01">
+  <div class="row-page01">
+    <span class="column">
+        <i class="fa fa-users fa-5x" aria-hidden="true"></i>                  
+        <!-- <img src="assets\images\1.jpg" alt="hhh">
+        cat1 -->
+      </span>
+    <span class="column">
+        <i class="fa fa-calendar fa-5x" aria-hidden="true"></i>
+        <!-- <img src="assets\images\2.jpg" alt="hhh">
+          cat2 -->
+      </span>
+    <span class="column">
+        <i class="fa fa-pencil fa-5x" aria-hidden="true"></i>        
+          <!-- <img src="assets\images\3.jpg" alt="hhh">
+          cat2 -->
+      </span>
   </div>
-  <div #obj2nd class="box-ct">
-    <h3>This is title for 2nd</h3>
+  <div class="row-page01">
+    <span class="column">Meet Now</span>
+    <span class="column">My Calendar</span>
+    <span class="column">Schedule</span>
   </div>
+  <h1>Welcome to the Communication Services Portal</h1>
+  <p>Warning: Sharing personal, firm, or client confidential information can put the firm at risk. All WebEx usage must conform
+    to local laws concerning client confidentiality, data protection and privacy as well as data protection, privacy and
+    risk policies. As a meeting host you are responsible for ensuring compliance and making meeting participants aware of
+    their confidentiality responsibilities. The use of Computer Based Audio (VOIP) may not be acceptable in some territories.
+    If you have any questions, or need further information or guidance regarding the information that you will be using during
+    your event, please contact your local Risk Management office.
+  </p>
+  <div> <h2>Learn more about WebEx</h2></div>
+    <div>Join the <a target="_blank" href="https://pwc-spark.com/groups/pwcit-communication-services">Communication
+    Services Spark Group
+    </a> to ask questions, share best practices and get the latest information.
+    </div>
 </div>
-
-<ng-template #myChk>
-  <input type="checkbox" name="" id="">
-</ng-template>
-
-<ng-template #myRad>
-  <input type="radio" name="" id="">
-</ng-template>
