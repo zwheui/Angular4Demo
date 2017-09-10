@@ -16,7 +16,7 @@ import { CalendarComponent } from './calendar/calendar.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { FindeventComponent } from './findevent/findevent.component';
 import { UsageComponent } from './usage/usage.component';
-import { OtherpagesComponent } from './otherpages/otherpages.component'
+// import { OtherpagesComponent } from './otherpages/otherpages.component'
 
 @NgModule({
   declarations: [
@@ -30,7 +30,7 @@ import { OtherpagesComponent } from './otherpages/otherpages.component'
     ScheduleComponent,
     FindeventComponent,
     UsageComponent,
-    OtherpagesComponent
+    // OtherpagesComponent
   ],
   imports: [
     BrowserModule,
