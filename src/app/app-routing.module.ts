@@ -1,41 +1,31 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { Page01Component } from './components/page01/page01.component';
-import { MyHeaderComponent } from './components/my-header/my-header.component';
-import { MyFooterComponent } from './components/my-footer/my-footer.component';
-import { CtrlLogDirective } from './directives/ctrl-log.directive';
-import { CtrlBGColorDirective } from './directives/ctrl-bgcolor.directive';
-import { CtrlHideDirective } from './directives/ctrl-hide.directive';
-import { Page02Component } from './components/page02/page02.component';
+import { NgModule } from '@angular/core'
+import { Routes,RouterModule,ActivatedRoute} from '@angular/router'
+import { WelcomeComponent} from './welcome/welcome.component'
+import { MeetingnowComponent } from './meetingnow/meetingnow.component'
+import { CalendarComponent} from './calendar/calendar.component'
+import { ScheduleComponent } from './schedule/schedule.component'
+import { ContactComponent } from './contact/contact.component'
+import { UsageComponent } from './usage/usage.component'
+import { FindeventComponent } from './findevent/findevent.component'
 
-const routes: Routes = [
-  {
-    path: '',
-    component: Page01Component
-  },
-  {
-    path: 'page02',
-    component: Page02Component
-  },
-  {
-    path: '**',
-    component: Page01Component
-  }
+const appRoutes:Routes=[
+    { path:'',redirectTo:'/welcome',pathMatch:'full'},
+    { path:'welcome',component:WelcomeComponent},
+    { path:'contact',component:ContactComponent},
+    { path:'calendar',component:CalendarComponent },
+    { path:'meetingnow',component:MeetingnowComponent },
+    { path:'schedule',component:ScheduleComponent },
+    { path:'findevent',component:FindeventComponent },
+    { path:'usage',component:UsageComponent }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
-  declarations: []
-})
-export class AppRoutingModule { }
+    imports:[RouterModule.forRoot(appRoutes)],
+    exports:[RouterModule]
 
-export const routingComponents = [
-  Page01Component,
-  Page02Component,
-  MyHeaderComponent,
-  MyFooterComponent,
-  CtrlLogDirective,
-  CtrlBGColorDirective,
-  CtrlHideDirective
-]
+})
+
+
+export class AppRoutingModule{
+
+}

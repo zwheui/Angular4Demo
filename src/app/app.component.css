@@ -1,0 +1,22 @@
+.mainbox{
+    padding-left: 0px;
+    padding-right: 0px;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+}
+.parent{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    flex-grow: 1;
+}
+.dynamic{
+    border-right: 1px solid  red;
+}
+.fix{
+    display: flex;
+    height: 100%;
+    width:100%;
+}
+

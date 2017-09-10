@@ -1,0 +1,79 @@
+/* .header {
+    min-height: 50px;
+    background: #D84C2B;
+}
+
+.header .logo{
+    margin-top: -12px;
+    width: 50px;
+    height: 50px;
+   
+    margin: 5px 15px;
+}
+
+
+.header .menu-toggle {
+    font-size: 22px;
+    border: none;
+    background: transparent;
+    color: #fff;
+}
+
+.header .loginname{
+    font-size:20px;
+    color:white;
+    text-decoration:none;
+    margin-right: 20px;
+    margin-top: 12px;
+    float: right;
+
+}
+.navtop{
+    background-color: white;
+    width:160px;
+    height:150px;
+    border:solid 1px black;
+    float: right;
+}
+
+.navtop ul{
+    padding-top: 5px;
+    list-style-type: none;
+    padding-left: 20px;
+    margin:0;
+    color: black;
+}
+
+.navtop ul li{
+   
+    font-size: 16px;
+
+}
+.navtop ul li a{
+    color:black;
+} */
+
+.red-background{
+    background-color: #D84C2B;
+
+}
+
+.white-color{
+    color: #fff
+}
+
+.logo
+{
+    max-height: 200px;
+    max-width: 60px;
+    margin-top: -6px;
+}
+
+.ulpadding{
+    padding-right: 8px;
+
+}
+
+.navpadding{
+    margin-bottom: 8px;
+}
