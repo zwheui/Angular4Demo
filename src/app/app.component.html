@@ -1,16 +1,74 @@
-<div class="box-main box-flex">
-  <app-my-header ctrlBGColor></app-my-header>
-  <div class="box-body box-flex-item box-flex">
-    <div ctrlLog class="box-left-nav box-ct box-flex">
-      <ul>
-        <li *ngFor="let item of leftNavList; let i = index;">
-          {{(i+1).toString()}} {{item}}
-        </li>
-      </ul>
+<!--The content below is only a placeholder and can be replaced.-->
+<header>
+    <div class="header-left-panel">
+        <a class="header-logo-link white-color pointer">
+            <img class="header-logo" src="./assets/img/pwclogo.png">
+        </a>
+        <a class="header-left-bar-link white-color pointer" (click)="ToggleLeftNav()">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </a>
     </div>
-    <div class="box-router box-flex-item">
-        <router-outlet></router-outlet>
+    <div class="header-right-panel">
+        <a class="header-right-link pointer white-color" (click)="ToggleRightMenu()">
+            <span>Timo Yan</span>
+            <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </a>
+        <div class="header-right-menu {{rightMenuToggleClass}}">
+            <ul>
+                <li>Settings</li>
+                <li>Personal Meeting</li>
+                <li>Desktop Tools</li>
+                <li>Schedule For</li>
+                <li>Web Ex</li>
+                <li>Audio Config</li>
+            </ul>
+        </div>
     </div>
-  </div>
-  <app-my-footer></app-my-footer>
+</header>
+<div class="content-wrapper">
+    <div class="left-nav-wrapper {{leftNavToggleClass}}">
+        <nav>
+            <div>Meeting Center</div>
+            <div id="MeetingCenter">
+                <span>Meetings</span>
+                <ul>
+                    <li>Meet Now</li>
+                    <li>Schedule</li>
+                    <li>My Calendar</li>
+                </ul>
+            </div>
+            <div>Reports</div>
+            <div id="Reports">
+                <span>Reporting</span>
+                <ul>
+                    <li>My Usage</li>
+                </ul>
+            </div>
+            <div>Support</div>
+            <div id="Support">
+                <span></span>
+                <ul>
+                    <li>Contact</li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="main-wrapper {{leftNavToggleClass}}">
+        <main>
+            <app-icon-list class="main-icon-list"></app-icon-list>
+            <div class="main-content">
+                <h2>Welcome to the Communication Services Portal</h2>
+                <p>Warning: Sharing personal, firm, or client confidential information can put the firm at risk. All WebEx usage must conform to local laws concerning client confidentiality, data protection and privacy as well as data protection, privacy
+                    and risk policies. As a meeting host you are responsible for ensuring compliance and making meeting participants aware of their confidentiality responsibilities. The use of Computer Based Audio (VOIP) may not be acceptable in some
+                    territories. If you have any questions, or need further information or guidance regarding the information that you will be using during your event, please contact your local Risk Management office.</p>
+                <footer>
+                    <div>
+                        <p>Copyright © 2017</p>
+                    </div>
+                    <div>
+                        PricewaterhouseCoopers. All rights reserved. PricewaterhouseCoopers refers to the network of member firms<br> of PricewaterhouseCoopers International Limited, each of which is a separate and independent legal entity.</div>
+                </footer>
+            </div>
+        </main>
+    </div>
 </div>

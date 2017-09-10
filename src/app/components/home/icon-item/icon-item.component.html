@@ -1,0 +1,4 @@
+<div class="main-icon" *ngFor="let iconObject of iconObjectList">
+    <i class="fa {{iconObject.FontName}}" aria-hidden="true" (click)="showName()"></i>
+    <p>{{iconObject.Title}}</p>
+</div>
