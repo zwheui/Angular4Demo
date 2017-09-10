@@ -1,11 +1,16 @@
 <div class="box-main box-flex">
-  <app-my-header (onBarClick)="onClick_HeaderBar($event)"></app-my-header>
+  <app-my-header ctrlBGColor></app-my-header>
   <div class="box-body box-flex-item box-flex">
-      <!-- <app-mynav class="box-left-nav" [isShow]="isShowLeftNav"></app-mynav> -->
-      <app-mynav *ngIf="isShowLeftNav" class="box-left-nav"></app-mynav>
-      <div class="box-router box-flex-item">
+    <div ctrlLog class="box-left-nav box-ct box-flex">
+      <ul>
+        <li *ngFor="let item of leftNavList; let i = index;">
+          {{(i+1).toString()}} {{item}}
+        </li>
+      </ul>
+    </div>
+    <div class="box-router box-flex-item">
         <router-outlet></router-outlet>
-      </div>
+    </div>
   </div>
   <app-my-footer></app-my-footer>
 </div>
