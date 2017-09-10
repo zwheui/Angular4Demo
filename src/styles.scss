@@ -1,31 +1,114 @@
-/* You can add global styles to this file, and also import other style files */
-html {
-    body {
-        margin: 0;
-        padding: 0;
-        .box-ct {
-            border: 1px black solid;
-            opacity: 0.5;
-            box-sizing: border-box;
-        }
-        .box-flex {
-            display: flex;
-            // justify-content: flex-start;
-            // justify-content: flex-end;
-            // justify-content: center;
-            // justify-content: space-between;
-            // justify-content: space-around;
+$header-height: 50px;
+$header-content-gap: 5px;
+$leftNav-width:250px;
 
-            // align-items: stretch;
-            // align-items: flex-start;
-            // align-items: flex-end;
-            // align-items: center;
-            // flex-basis: 
-            // width: 
-            // margin:
-        }
-        .box-flex-item {
-            flex: 1;
-        }
-    }
+/* You can add global styles to this file, and also import other style files */
+
+.white-color {
+    color: white;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+header {
+    height: $header-height;
+    background-color: orangered;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header-left-panel {
+    display: flex;
+    flex-direction: row;
+    width: 10%;
+}
+
+.header-logo-link {
+    height: 100%;
+}
+
+.header-logo {
+    width: 100%;
+    height: 100%;
+}
+
+.header-left-bar-link {
+    align-self: center;
+}
+
+.header-left-bar-link:hover {
+    color: black;
+}
+
+.header-right-panel {
+    display: flex;
+    flex-direction: row;
+    width: 10%;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-right-link:hover {
+    color: black;
+}
+
+.content-wrapper {
+    box-sizing: border-box;
+    margin-top: $header-height + $header-content-gap;
+    min-height: 100%;
+}
+
+.left-nav-wrapper {
+    box-sizing: border-box;
+    border-right: 1px solid orange;
+    position: fixed;
+    top: 55px;
+    left: 0px;
+    width: $leftNav-width;
+    max-height: calc(100vh - #{$header-height} - #{$header-content-gap});
+    min-height: calc(100vh - #{$header-height} - #{$header-content-gap});
+    overflow-y: auto;
+}
+
+.main-wrapper {
+    box-sizing: border-box;
+    padding-left: $leftNav-width;
+    min-height: calc(100vh - #{$header-height} - #{$header-content-gap});
+    //width:200px;
+}
+
+.main-icon-list {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.main-icon {
+    flex-grow: 1;
+}
+
+.main-icon>i {
+    font-size: 450%;
+}
+
+.header-right-menu {
+    position: absolute;
+    right: 0px;
+    top: $header-height;
+    width: 180px;
+    background-color: lightgray;
+}
+
+.header-right-menu ul {
+    margin: 0;
+    padding: 10px 10px;
+    list-style: none;
 }

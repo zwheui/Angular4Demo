@@ -1,19 +1,11 @@
-.box-main {
-  flex-direction: column;
-  min-height: 100vh;
-  justify-content: space-between;
-  .box-body {
-    // margin: auto;
-    .box-left-nav {
-      flex-basis: 30%;
-
-      ul {
-          margin: auto 0;
-      }
-    }
-  }
+.left-nav-wrapper.toggle {
+    left: -250px;
 }
 
-.container {
-  display: flex;
+.main-wrapper.toggle {
+    padding-left: 0px;
+}
+
+.header-right-menu.toggle {
+    display: none;
 }
