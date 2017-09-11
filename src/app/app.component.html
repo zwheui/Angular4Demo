@@ -1,16 +1,149 @@
-<div class="box-main box-flex">
-  <app-my-header ctrlBGColor></app-my-header>
-  <div class="box-body box-flex-item box-flex">
-    <div ctrlLog class="box-left-nav box-ct box-flex">
-      <ul>
-        <li *ngFor="let item of leftNavList; let i = index;">
-          {{(i+1).toString()}} {{item}}
-        </li>
-      </ul>
-    </div>
-    <div class="box-router box-flex-item">
-        <router-outlet></router-outlet>
-    </div>
-  </div>
-  <app-my-footer></app-my-footer>
+<div class="height-full box box-vertical">
+	<div class="top-nav red-background">
+		<div class="box box-horizontal box-nowrap box-space-between">
+			<div>
+				<a class="navbar-brand white-color" href="#"><img class="logo" src="assets/img/pwclogo.png" /></a> 
+				<a (click)="toggleClick($event)" href="#" id="menu-toggle" class="navbar-brand white-color" name="menu-toggle">
+					<i class="fa fa-bars" aria-hidden="true"></i>
+				</a>
+			</div>
+
+			<a href="#" onclick="return false;" class="dropdown-toggle white-color" id="dropdown" data-toggle="dropdown" role="button" aria-expanded="false">
+				{{user}} <span class="caret"></span>
+			</a>
+		</div>
+	</div>
+
+	
+	<div class="height-full box box-horizontal margin-top-5">
+
+		<app-leftnav [showLeftNav] = "showLeftNav"></app-leftnav>
+
+		<app-maincontent></app-maincontent>
+
+		<!-- <div class="width-full padding-20">
+			<div class="icons box box-horizontal box-space-between box-wrap">
+				<div class="icon">
+					<a ui-sref="MeetingPersonalMeeting" title="Meet Now" href="#">
+						<span class="fa-stack last-icon"><i class="fa fa-users fa-stack-2x"></i></span>
+					</a>
+					<p class="innerIconsText">Meet Now</p>
+				</div>
+				<div class="icon">
+					<a ui-sref="MeetingList" title="My Calendar" href="#">
+						<span class="fa-stack last-icon">
+							<i class="fa fa-calendar-o fa-stack-2x"></i> <strong class="fa-stack-1x calendar-text myCalendar ng-binding">1</strong>
+						</span>
+					</a>
+					<p class="innerIconsText">My Calendar</p>
+				</div>
+				<div class="icon">
+					<a ui-sref="MeetingCreateMeeting" title="Schedule" href="#">
+						<span class="fa-stack last-icon"><i class="fa fa-pencil-square-o fa-stack-2x"></i></span>
+					</a>
+					<p class="innerIconsText">Schedule</p>
+				</div>
+				<div></div>
+			</div>
+
+			<div ng-bind-html="homeContent" class="ng-binding">
+				<h2>Welcome to the Communication Services Portal</h2>
+				<p>Warning: Sharing personal, firm, or client confidential information can put the firm at risk. All WebEx usage must conform to local laws concerning client confidentiality, data protection and privacy as well as data protection, privacy and risk policies. As a meeting host you are responsible for ensuring compliance and making meeting participants aware of their confidentiality responsibilities. The use of Computer Based Audio (VOIP) may not be acceptable in some territories. If you have any questions, or need further information or guidance regarding the information that you will be using during your event, please contact your local Risk Management office.</p>
+
+				<h2>Learn more about WebEx</h2>Join the 
+				<a target="_blank" href="#">Communication Services Spark Group</a> 
+				to ask questions, share best practices and get the latest information.
+			</div>
+
+			<footer class="margin-top-20">
+				<div>
+					<p class="ng-binding">Copyright © 2017</p>
+				</div>
+				<div ng-bind-html="footer" class="ng-binding"><br>
+					PricewaterhouseCoopers. All rights reserved. PricewaterhouseCoopers refers to the network of member firms<br>
+					of PricewaterhouseCoopers International Limited, each of which is a separate and independent legal entity.
+				</div>
+			</footer>
+		</div> -->
+
+
+	</div>
+	
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <button class="btn btn-primary">Test Button</button> -->
+
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav> -->

@@ -1,0 +1,44 @@
+<div class="width-full padding-20">
+	<div class="icons box box-horizontal box-space-between box-wrap">
+		<div class="icon">
+			<a ui-sref="MeetingPersonalMeeting" title="Meet Now" href="#">
+				<span class="fa-stack last-icon"><i class="fa fa-users fa-stack-2x"></i></span>
+			</a>
+			<p class="innerIconsText">Meet Now</p>
+		</div>
+		<div class="icon">
+			<a ui-sref="MeetingList" title="My Calendar" href="#">
+				<span class="fa-stack last-icon">
+					<i class="fa fa-calendar-o fa-stack-2x"></i> <strong class="fa-stack-1x calendar-text myCalendar ng-binding">1</strong>
+				</span>
+			</a>
+			<p class="innerIconsText">My Calendar</p>
+		</div>
+		<div class="icon">
+			<a ui-sref="MeetingCreateMeeting" title="Schedule" href="#">
+				<span class="fa-stack last-icon"><i class="fa fa-pencil-square-o fa-stack-2x"></i></span>
+			</a>
+			<p class="innerIconsText">Schedule</p>
+		</div>
+		<div></div>
+	</div>
+
+	<div ng-bind-html="homeContent" class="ng-binding">
+		<h2>Welcome to the Communication Services Portal</h2>
+		<p>Warning: Sharing personal, firm, or client confidential information can put the firm at risk. All WebEx usage must conform to local laws concerning client confidentiality, data protection and privacy as well as data protection, privacy and risk policies. As a meeting host you are responsible for ensuring compliance and making meeting participants aware of their confidentiality responsibilities. The use of Computer Based Audio (VOIP) may not be acceptable in some territories. If you have any questions, or need further information or guidance regarding the information that you will be using during your event, please contact your local Risk Management office.</p>
+
+		<h2>Learn more about WebEx</h2>Join the 
+		<a target="_blank" href="#">Communication Services Spark Group</a> 
+		to ask questions, share best practices and get the latest information.
+	</div>
+
+	<footer class="margin-top-20">
+		<div>
+			<p class="ng-binding">Copyright © 2017</p>
+		</div>
+		<div ng-bind-html="footer" class="ng-binding"><br>
+			PricewaterhouseCoopers. All rights reserved. PricewaterhouseCoopers refers to the network of member firms<br>
+			of PricewaterhouseCoopers International Limited, each of which is a separate and independent legal entity.
+		</div>
+	</footer>
+</div>

@@ -1,0 +1,94 @@
+/* You can add global styles to this file, and also import other style files */
+/*body{
+	height:100vh;
+}*/
+html, body{
+	height: 100%;
+	margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+}
+.red-background{
+	background-color: #D84C2B;
+}
+.white-color {
+    color: #fff;
+}
+
+.box{
+	display: flex;
+}
+.box-horizontal {
+  	flex-direction: row;
+}
+.box-vertical{
+  	flex-direction: column;  	
+}
+.box-flex-start{
+	justify-content:flex-start;
+}
+.box-space-between{
+	justify-content:space-between;
+}
+.box-wrap{
+	flex-wrap: wrap;
+}
+
+.margin-top-5{
+	margin-top: 5px;
+}
+.margin-border-padding-0{
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+}
+.width-full{
+	width:100%;
+}
+.height-full {
+	height:100%;
+}
+.padding-15{
+	padding: 15px;
+}
+.padding-10-15{
+	padding: 10px 15px;
+}
+.padding-20{
+	padding: 20px;
+}
+.margin-10-15{
+	margin: 10px 15px;
+}
+.margin-top-20{
+	margin-top: 20px;
+}
+.background-grey{
+	background-color: #f5f5f5;
+}
+.font-16{
+	font-size: 16px;
+}
+.color-black{
+	color: #333;
+}
+.border-top-line{
+	border-top: 1px solid #ddd;
+}
+ .border-bottom-line{
+ 	border-bottom: 1px solid #ddd;
+ }
+.border-radius: {
+	border-radius: 10px;
+    border: 1px solid #ddd;
+}
+.border-round-card{
+	border-radius: 5px;
+    border: 1px solid #ddd;
+}

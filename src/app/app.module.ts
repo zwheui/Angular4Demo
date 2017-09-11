@@ -1,21 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CtrlDemoDirective } from './directives/ctrl-demo.directive';
+import {DataService} from './data.service';
+import { LeftnavComponent } from './leftnav/leftnav.component';
+import { MaincontentComponent } from './maincontent/maincontent.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    routingComponents,
-    CtrlDemoDirective
+    LeftnavComponent,
+    MaincontentComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+    BrowserModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

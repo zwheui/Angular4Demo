@@ -1,0 +1,29 @@
+.left-nav{
+	width:0px;
+	border-right: 0px solid;
+    border-color: #D84C2B;
+    padding:0;
+    overflow-y: auto;
+    transition: all .5s ease;
+}
+.left-nav a{
+    font-size: 14px;
+}
+.left-nav h3 a{
+    color: #333;
+    font-size: 16px;
+}
+.left-nav h4{
+    font-size: 18px;
+}
+ul li{
+    list-style-type: none;
+}
+@media (min-width: 768px){
+    .left-nav{
+        /* width:258px; */
+        width:258px;
+        border-right: 1px solid;
+        border-color: #D84C2B;
+    }
+}
