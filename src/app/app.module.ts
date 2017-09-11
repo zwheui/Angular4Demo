@@ -1,19 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule, routingComponents } from './app-routing.module';
+import { AppRoutingModule,routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CtrlDemoDirective } from './directives/ctrl-demo.directive';
+import { AngularFontAwesomeModule } from 'angular-font-awesome/angular-font-awesome';
+import {BrowserAnimationsModule  } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
-    routingComponents,
-    CtrlDemoDirective
+    routingComponents
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFontAwesomeModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

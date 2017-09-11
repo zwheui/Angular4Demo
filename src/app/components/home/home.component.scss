@@ -1,0 +1,25 @@
+.home-title{
+    box-sizing: border-box;
+    margin: 50px 0 0 50px;
+    .box-cal{
+        position: relative;
+    }
+    a{
+        font-size: 8em;
+        color: #D84C2B;
+        strong{
+            margin: 35px 0 0 30px;
+            z-index:-1;
+            width: 50px;
+            font-size: 0.7em;
+            position: absolute;
+        }
+    }
+    p{
+        margin-left: 25px;
+    }
+}
+
+.home-content{
+    margin-left: 30px;
+}

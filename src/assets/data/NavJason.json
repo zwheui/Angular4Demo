@@ -1,0 +1,26 @@
+[{
+    "title": "Meeting Center",
+    "content":
+       {
+           "subtitle": "Meetings",
+           "subcontent": ["Meet Now", "Schedule","My Canlendar","Five Events"]
+       }      
+  }, 
+{
+    "title": "Reports",
+    "content":
+       {
+           "subtitle": "Reportings",
+           "subcontent": ["My Usage"]
+       }      
+  }, 
+{
+    "title": "Support",
+    "content":
+       {
+           "subtitle": "",
+           "subcontent": ["Contact"]
+       }      
+  }
+
+]
