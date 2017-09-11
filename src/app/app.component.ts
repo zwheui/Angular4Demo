@@ -10,7 +10,7 @@ export class AppComponent {
   title = "Keen's Angular site";
   user = "Keen Guo";
   showLeftNav = true;
-  
+  showHeader2 = false;
 
   constructor(
     @Inject(DataService) private leftNave
@@ -28,5 +28,9 @@ export class AppComponent {
     this.showLeftNav = !this.showLeftNav;
 
     console.log(this.showLeftNav);
+  }
+
+  ellipsisClick(){
+    this.showHeader2 = !this.showHeader2;
   }
 }

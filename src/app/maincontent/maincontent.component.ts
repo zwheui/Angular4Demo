@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MaincontentComponent implements OnInit {
 
+	today = (new Date()).getDate().toString();
   constructor() { }
 
   ngOnInit() {
