@@ -1,11 +1,45 @@
 .left-nav-wrapper.toggle {
-    left: -250px;
+    left: 0px;
 }
 
 .main-wrapper.toggle {
-    padding-left: 0px;
+    padding-left: 250px;
 }
 
 .header-right-menu.toggle {
-    display: none;
+    display: block;
+}
+
+.left-nav-title {
+    border: 1px solid rgb(221, 221, 221);
+    padding: 10px 15px;
+    border-radius: 3px;
+    background-color: #f5f5f5;
+    color: #333;
+    font-size: 16px;
+}
+
+.left-nav-group-container {
+    border: 1px solid #ddd;
+}
+
+.left-nav-group-title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    padding: 10px 15px;
+    display: block;
+}
+
+.left-nav-group {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.left-nav-group-item {
+    border: 1px solid #ddd;
+    display: block;
+    padding: 10px 15px;
+    padding-left: 30px;
 }

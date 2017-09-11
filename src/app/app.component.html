@@ -9,7 +9,7 @@
         </a>
     </div>
     <div class="header-right-panel">
-        <a class="header-right-link pointer white-color" (click)="ToggleRightMenu()">
+        <a class="header-right-link pointer white-color" (click)="ToggleRightMenu(1)">
             <span>Timo Yan</span>
             <i class="fa fa-caret-down" aria-hidden="true"></i>
         </a>
@@ -28,27 +28,27 @@
 <div class="content-wrapper">
     <div class="left-nav-wrapper {{leftNavToggleClass}}">
         <nav>
-            <div>Meeting Center</div>
-            <div id="MeetingCenter">
-                <span>Meetings</span>
-                <ul>
-                    <li>Meet Now</li>
-                    <li>Schedule</li>
-                    <li>My Calendar</li>
+            <div class="left-nav-title">Meeting Center</div>
+            <div class="left-nav-group-container">
+                <span class="left-nav-group-title">Meetings</span>
+                <ul class="left-nav-group">
+                    <li class="left-nav-group-item">Meet Now</li>
+                    <li class="left-nav-group-item">Schedule</li>
+                    <li class="left-nav-group-item">My Calendar</li>
                 </ul>
             </div>
-            <div>Reports</div>
-            <div id="Reports">
-                <span>Reporting</span>
-                <ul>
-                    <li>My Usage</li>
+            <div class="left-nav-title">Reports</div>
+            <div class="left-nav-group-container">
+                <span class="left-nav-group-title">Reporting</span>
+                <ul class="left-nav-group">
+                    <li class="left-nav-group-item">My Usage</li>
                 </ul>
             </div>
-            <div>Support</div>
-            <div id="Support">
-                <span></span>
-                <ul>
-                    <li>Contact</li>
+            <div class="left-nav-title">Support</div>
+            <div class="left-nav-group-container">
+                <!-- <span class="left-nav-group-title"></span> -->
+                <ul class="left-nav-group">
+                    <li class="left-nav-group-item">Contact</li>
                 </ul>
             </div>
         </nav>

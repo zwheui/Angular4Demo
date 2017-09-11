@@ -70,7 +70,7 @@ header {
     border-right: 1px solid orange;
     position: fixed;
     top: 55px;
-    left: 0px;
+    left: -250px;
     width: $leftNav-width;
     max-height: calc(100vh - #{$header-height} - #{$header-content-gap});
     min-height: calc(100vh - #{$header-height} - #{$header-content-gap});
@@ -81,7 +81,7 @@ header {
     box-sizing: border-box;
     padding-left: $leftNav-width;
     min-height: calc(100vh - #{$header-height} - #{$header-content-gap});
-    //width:200px;
+    padding-left: 0px;
 }
 
 .main-icon-list {
@@ -105,6 +105,7 @@ header {
     top: $header-height;
     width: 180px;
     background-color: lightgray;
+    display: none;
 }
 
 .header-right-menu ul {
