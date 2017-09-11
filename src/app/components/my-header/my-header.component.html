@@ -1,3 +1,15 @@
-<header class="box-ct">
-  This is Header
-</header>
+<div class="box-ct box-flex box-header" appHighlight>
+   <div class="">
+      <a href="/home"><img [src]="pwclogopath.logopath"/></a>
+    </div>
+    <div  class="box-flex-item box-hlist">
+       <i (click)="onClick()" class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+     <a (click)="onMouseover()"> <div  class=" box-huser" >
+      <i class="fa fa-user-o" aria-hidden="true"></i>
+       <span>{{UserName}}</span>
+       <i class="fa fa-sort-desc fa-3"  aria-hidden="true"></i>
+    </div>
+    </a>
+    
+</div>

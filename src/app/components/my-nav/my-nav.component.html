@@ -1,0 +1,72 @@
+<div  class=" box-ct bar-nav" [@toggleState]="isShow.toString()">
+  <nav *ngFor="let item of listNavData, let i=index">
+    <div class="bar-title" (click)="onTitleClick($event)">
+       <h3>
+          <a href="/#">{{item.title}}</a>
+      </h3>
+    </div>
+    <div class="" id="content-{{i}}" [class]="getStatus()">
+       <span class="bar-sec-title box-flex">{{item.content.subtitle}}</span>
+       <ul>
+         <li *ngFor="let subitem of item.content.subcontent">
+           <a href="/#">{{subitem}}</a>
+          </li>
+       </ul>
+    </div>
+  </nav>
+  <!--<nav>
+    <div  class="bar-title" (click)="onFTitleClick()">
+      <h3>
+          <a href="/#">Meeting Center</a>
+      </h3>
+    </div>
+    
+    <div class="bar-content" *ngIf="isOpenFirst">
+       <span class="bar-sec-title box-flex">Meetings</span>
+       <ul >
+          <li class="box-flex-item">
+             <a href="/#">Meet Now</a>
+          </li>
+           <li>
+              <a href="/#">Schedule</a>
+           </li>
+           <li>
+              <a href="/#">My Canlendar</a>
+           </li>
+            <li class="bar-ul-last">
+               <a href="/#">Five Events</a>
+            </li>
+         </ul>
+    </div>
+   </nav>
+
+   <nav >
+    <div  class="bar-title" (click)="onSTitleClick()">
+      <h3>
+          <a href="/#">Reports</a>
+      </h3>
+    </div>
+    <div class="bar-content" *ngIf="isOpenSecond">
+    <span  class="bar-sec-title box-flex">Reporting</span>
+    <ul>
+      <li class="bar-ul-last">
+        <a href="/#">My Usage</a>
+      </li>     
+    </ul>
+    </div>
+   </nav>
+   <nav >
+    <div  class="bar-title" (click)="onTTitleClick()">
+      <h3>
+          <a href="/#">Support</a>
+      </h3>
+    </div>
+    <div class="bar-content" *ngIf="isOpenThird">    
+    <ul >
+      <li class="bar-ul-last">
+        <a href="/#">Contact</a>
+      </li>     
+    </ul>
+    </div>
+   </nav>-->
+</div>

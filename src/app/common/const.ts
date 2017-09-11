@@ -1,4 +1,6 @@
-export const page01 = {
-    title: 'This is title for Page01',
-    content: 'This is content for Page01'
+const header_logoPath = {
+    logopath:'../assets/pwclogo.png',
+    title:'ss'
 }
+
+export default header_logoPath
