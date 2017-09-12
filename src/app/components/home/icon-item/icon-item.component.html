@@ -1,4 +1,10 @@
 <div class="main-icon" *ngFor="let iconObject of iconObjectList">
-    <i class="fa {{iconObject.FontName}}" aria-hidden="true" (click)="showName()"></i>
-    <p>{{iconObject.Title}}</p>
+  <div class="main-icon-wrapper">
+    <a class="main-icon-link pointer" (click)="showName()">
+          <span class="main-icon-link-inner">
+              <i class="fa {{iconObject.FontName}} fa-stack-2x" aria-hidden="true"></i>
+          </span>
+    </a>
+    <p class="main-icon-title">{{iconObject.Title}}</p>
+  </div>
 </div>

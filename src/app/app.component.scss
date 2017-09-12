@@ -43,3 +43,18 @@
     padding: 10px 15px;
     padding-left: 30px;
 }
+
+.main-icon-list {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: flex-start;
+  position: relative;
+  height:160px;
+  margin-top:2%;
+  margin-bottom: 2%;
+}
+
+.left-nav{
+  margin-top:5px;
+}

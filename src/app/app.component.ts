@@ -40,7 +40,7 @@ export class AppComponent implements OnInit {
     }
   }
 
-  ToggleRightMenu(status: number): void {
+  ToggleRightMenu(event: Event, status: number): void {
     this.rightMenuStatus = !this.rightMenuStatus;
     if (this.rightMenuStatus && status === 1) {
       this.rightMenuToggleClass = 'toggle';
@@ -61,7 +61,7 @@ export class AppComponent implements OnInit {
       target = target.parentElement;
     }
     if (!parentFound) {
-      this.ToggleRightMenu(-1);
+      this.ToggleRightMenu(null, -1);
       event.stopPropagation();
     }
   }
