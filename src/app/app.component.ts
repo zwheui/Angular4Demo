@@ -17,8 +17,7 @@ import { MenuComponent } from './menu/menu.component';
       })),
       state('false',style({
         transform:'translate(-20vw,0)',
-        opacity:0,
-        width:0
+        opacity:0
       })),
       transition('true <=> false',animate('800ms ease-in'))
     ])
