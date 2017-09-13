@@ -38,8 +38,8 @@ export class MyHeaderComponent implements OnInit {
   }
 
   async loadMenu() {
-    this.menuList = await this._httpSrv.getJSON('menu');
-    // this.menuList = await this._httpSrv.getHttp('menu');
+    // this.menuList = await this._httpSrv.getJSON('menu');
+    this.menuList = await this._httpSrv.getHttp('menu');
   }
 
   onClick() {

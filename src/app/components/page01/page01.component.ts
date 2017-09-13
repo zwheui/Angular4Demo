@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { page01 } from "../../common/const";
 
 @Component({
   selector: 'app-page01',
@@ -18,7 +17,7 @@ export class Page01Component implements OnInit {
     this.pageData = {
       title: 'my Title'
     };
-    this.myText = "my Text";
+    this.myText = 'my Text';
   }
   onClick(obj2nd) {
     console.log(obj2nd);
