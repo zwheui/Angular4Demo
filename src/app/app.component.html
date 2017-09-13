@@ -44,7 +44,7 @@
   </div>
 </header>
 <div class="content-wrapper">
-  <div class="left-nav-wrapper {{leftNavToggleClass}}">
+  <div [@leftPanelToggleAnimation]="leftBarStatus.toString()"  class="left-nav-wrapper {{leftNavToggleClass}}">
     <nav class="left-nav">
       <div class="left-nav-title">Meeting Center</div>
       <div class="left-nav-group-container">
@@ -52,7 +52,6 @@
         <ul class="left-nav-group">
           <li class="left-nav-group-item">
             <a>Meet Now</a>
-
           </li>
           <li class="left-nav-group-item">
             <a>Schedule
@@ -86,7 +85,7 @@
       </div>
     </nav>
   </div>
-  <div class="main-wrapper {{leftNavToggleClass}}">
+  <div [@mainPanelToggleAnimation]="leftBarStatus.toString()" class="main-wrapper {{leftNavToggleClass}}">
     <main>
       <app-icon-list class="main-icon-list"></app-icon-list>
       <div class="main-content">

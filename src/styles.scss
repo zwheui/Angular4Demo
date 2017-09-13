@@ -126,7 +126,7 @@ header {
     border-right: 1px solid #D84C2B;
     position: fixed;
     top: 55px;
-    left: -250px;
+    //left: -250px;
     width: $leftNav-width;
     max-height: calc(100vh - #{$header-height} - #{$header-content-gap});
     min-height: calc(100vh - #{$header-height} - #{$header-content-gap});
@@ -137,7 +137,6 @@ header {
     box-sizing: border-box;
     padding-left: $leftNav-width;
     min-height: calc(100vh - #{$header-height} - #{$header-content-gap});
-    padding-left: 0px;
 }
 
 .main-wrapper > main{

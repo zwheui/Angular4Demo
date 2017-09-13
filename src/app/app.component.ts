@@ -12,7 +12,27 @@ import {
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  animations: [
+    trigger('leftPanelToggleAnimation', [
+      state('false', style({
+        width: '1px'
+      })),
+      state('true', style({
+        width: '250px'
+      })),
+      transition('false <=> true', animate('500ms ease-in'))
+    ]),
+    trigger('mainPanelToggleAnimation', [
+      state('false', style({
+        paddingLeft: '0px'
+      })),
+      state('true', style({
+        paddingLeft: '250px'
+      })),
+      transition('false <=> true', animate('500ms ease-in'))
+    ])
+  ]
 })
 export class AppComponent implements OnInit {
   leftBarStatus: Boolean;
