@@ -46,8 +46,10 @@
 <div class="content-wrapper">
   <div [@leftPanelToggleAnimation]="leftBarStatus.toString()"  class="left-nav-wrapper {{leftNavToggleClass}}">
     <nav class="left-nav">
-      <div class="left-nav-title">Meeting Center</div>
-      <div class="left-nav-group-container">
+      <div class="left-nav-title">
+        <a (click)="LeftNavMenuToggle('MeetingCenter')">Meeting Center</a>
+      </div>
+      <div class="left-nav-group-container" [@leftNavMeetingCenterAnimation]="leftNavMeetingCenter">
         <span class="left-nav-group-title">Meetings</span>
         <ul class="left-nav-group">
           <li class="left-nav-group-item">
@@ -64,7 +66,7 @@
         </ul>
       </div>
       <div class="left-nav-title">Reports</div>
-      <div class="left-nav-group-container">
+      <div class="left-nav-group-container closed">
         <span class="left-nav-group-title">Reporting</span>
         <ul class="left-nav-group">
           <li class="left-nav-group-item">
@@ -74,7 +76,7 @@
         </ul>
       </div>
       <div class="left-nav-title">Support</div>
-      <div class="left-nav-group-container">
+      <div class="left-nav-group-container closed">
         <!-- <span class="left-nav-group-title"></span> -->
         <ul class="left-nav-group">
           <li class="left-nav-group-item">

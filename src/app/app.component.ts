@@ -31,6 +31,15 @@ import {
         paddingLeft: '250px'
       })),
       transition('false <=> true', animate('500ms ease-in'))
+    ]),
+    trigger('leftNavMeetingCenterAnimation', [
+      state('false', style({
+        height: '0px'
+      })),
+      state('true', style({
+
+      })),
+      transition('false <=> true', animate('500ms ease-in'))
     ])
   ]
 })
@@ -39,12 +48,14 @@ export class AppComponent implements OnInit {
   leftNavToggleClass: string;
   rightMenuStatus: Boolean;
   rightMenuToggleClass: string;
+  leftNavMeetingCenter: string;
 
   ngOnInit() {
     this.rightMenuToggleClass = '';
     this.rightMenuStatus = false;
     this.leftNavToggleClass = 'toggle';
     this.leftBarStatus = true;
+    this.leftNavMeetingCenter = 'true';
   }
 
   constructor() {
@@ -68,6 +79,14 @@ export class AppComponent implements OnInit {
     } else {
       this.rightMenuToggleClass = '';
       this.rightMenuStatus = false;
+    }
+  }
+
+  LeftNavMenuToggle(titleName: string): void {
+    if (this.leftNavMeetingCenter === 'true') {
+      this.leftNavMeetingCenter = 'false';
+    } else {
+      this.leftNavMeetingCenter = 'true';
     }
   }
 
