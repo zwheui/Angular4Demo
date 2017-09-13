@@ -7,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IconItemComponent implements OnInit {
   iconObjectList: IconObject[] = [];
+  todayDate: string;
 
   constructor() { }
 
   ngOnInit() {
+    this.todayDate = new Date().getDate().toString();
+
     this.iconObjectList.push({
       Title: 'Meet Now',
       FontName: 'fa-users'

@@ -1,10 +1,11 @@
-<div class="main-icon" *ngFor="let iconObject of iconObjectList">
-  <div class="main-icon-wrapper">
-    <a class="main-icon-link" (click)="showName()">
-          <span class="main-icon-link-inner">
+<div class="main-icon" *ngFor="let iconObject of iconObjectList; let idx=index">
+    <div class="main-icon-wrapper">
+        <a class="main-icon-link" (click)="showName()">
+            <span class="main-icon-link-inner">
               <i class="fa {{iconObject.FontName}} fa-stack-2x" aria-hidden="true"></i>
+              <strong *ngIf="idx === 1" class="calendar-date">{{todayDate}}</strong>
           </span>
-    </a>
-    <p class="main-icon-title">{{iconObject.Title}}</p>
-  </div>
+        </a>
+        <p class="main-icon-title">{{iconObject.Title}}</p>
+    </div>
 </div>

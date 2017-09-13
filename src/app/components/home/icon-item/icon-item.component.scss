@@ -1,34 +1,44 @@
 .main-icon {
-  flex-grow: 1;
-  position: relative;
-  display: flex;
+    flex-grow: 1;
+    position: relative;
+    display: flex;
 }
 
-.main-icon-wrapper{
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  margin-left:5%;
-  margin-right: 4%;
+.main-icon-wrapper {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-right: 4%;
 }
 
-.main-icon-title{
-  margin-left:20%;
-  width:100%;
-  margin-bottom: 0;
+.main-icon-title {
+    margin-left: 20%;
+    width: 100%;
+    margin-bottom: 0;
 }
 
-.main-icon-link-inner > i {
-  font-size: 126px;
-  color: #D84C2B
+.main-icon-link-inner {
+    display: block;
+    position: relative;
+    i {
+        font-size: 126px;
+        color: #D84C2B
+    }
+    i:hover {
+        color: #7a1b1b;
+    }
+    height:100%;
 }
 
-.main-icon-link-inner > i:hover {
-  color:#7a1b1b;
+.main-icon-link {
+    height: 100%;
 }
 
-
-
-.main-icon-link{
-  height: 100%;
+.calendar-date {
+    position: absolute;
+    font-size: 40px;
+    z-index: 1;
+    top: 45%;
+    left: 45%;
 }
