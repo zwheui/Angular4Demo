@@ -1,21 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
+@import './app/common/variables';
+
 html {
     body {
         margin: 0;
         padding: 0;
+        .a-nostyle a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .box-cursor:hover {
+            cursor: pointer;
+        }
+        .box-list {
+            ul {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+            }
+        }
         .box-ct {
-            border: 1px black solid;
-            opacity: 0.5;
+            border: 1px solid rgba(0, 0, 0, 0.5);
             box-sizing: border-box;
         }
-        .box-flex {
+        .box-flex-center {
             display: flex;
+            align-items: center;
+        }
+        .box-flex-item {
+            flex: 1;
+        }
+        .box-flex {
+            display: flex; 
             // justify-content: flex-start;
             // justify-content: flex-end;
             // justify-content: center;
             // justify-content: space-between;
             // justify-content: space-around;
-
             // align-items: stretch;
             // align-items: flex-start;
             // align-items: flex-end;
@@ -24,8 +44,22 @@ html {
             // width: 
             // margin:
         }
-        .box-flex-item {
-            flex: 1;
+
+        @keyframes spin {
+            from {
+                transform:rotate(0deg);
+            }
+            to {
+                transform:rotate(360deg);
+            }
+        }
+        @keyframes rotate180 {
+            from {
+                transform:rotate(0deg);
+            }
+            to {
+                transform:rotate(180deg);
+            }
         }
     }
 }

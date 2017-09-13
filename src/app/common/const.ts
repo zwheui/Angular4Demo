@@ -1,4 +1,1 @@
-export const page01 = {
-    title: 'This is title for Page01',
-    content: 'This is content for Page01'
-}
+export const API_URL = 'https://my-json-server.typicode.com/zwheui/jsondata/';

@@ -1,0 +1,67 @@
+@import '../../common/variables';
+
+header {
+    color: $white;
+    border-color: #e7e7e7;
+    background: $primary;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 999;
+    .box-logo {
+        >* {
+            margin: 0 10px 0 0;
+        }
+        >i {
+            transform: scale(1);
+            transition: $speed_default;
+        }
+    }
+    .box-logo:hover {
+        >i {
+            transform: scale(1.5);
+            transition: $speed_default;
+        }
+    }
+    .box-username {
+        height: 50px;
+        font-size: 14px;
+        >i {
+            // animation: spin 3000ms infinite linear;
+            margin-left: 5px;
+            transform: rotate( -360deg);
+            transition: $speed_default;
+        }
+    }
+    .box-username:hover+.box-menu {
+        display: block;
+    }
+    .box-username:hover {
+        >i {
+            transform: rotate( -180deg);
+            transition: $speed_default;
+        }
+    }
+    .box-menu:hover {
+        display: block;
+    }
+    .box-menu {
+        display: none;
+        position: absolute;
+        top: 48px;
+        right: 0;
+        width: 160px;
+        color: $black;
+        background: $white;
+        z-index: 99;
+        li {
+            padding: 3px 20px;
+            margin: 5px 0;
+        }
+        li:hover {
+            background: rgba(128, 128, 128, 0.2);
+        }
+    }
+    img {
+        height: 50px;
+    }
+}

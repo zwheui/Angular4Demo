@@ -1,3 +1,22 @@
-<header class="box-ct">
-  This is Header
+<header class="box-flex-center">
+    <div class="box-logo box-cursor box-flex-center">
+        <img src="assets/images/pwclogo.png" alt="">
+        <i (click)="onClick()" class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+
+    <div class="box-username box-cursor box-flex-center">
+        Tom Zhu
+        <i class="fa fa-sort-desc fa-3" aria-hidden="true"></i>
+    </div>
+
+    <div class="box-menu box-list box-ct">
+        <ul>
+            <li class="box-cursor a-nostyle" *ngFor="let item of menuList">
+                <a *ngIf="item.href;else a_routerlink" [href]="item.href">{{item.name}}</a>
+                <ng-template #a_routerlink>
+                    <a [routerLink]="[item.routerLink]" [queryParams]="item.queryParams">{{item.name}}</a>
+                </ng-template>
+            </li>
+        </ul>
+    </div>
 </header>

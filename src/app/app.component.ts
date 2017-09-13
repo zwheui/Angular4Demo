@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  leftNavList = ['title 01', 'title 02', 'title 03'];
+  isShowLeftNav = true;
+  headerText: string;
+
+  onClick_HeaderBar(value) {
+    console.log('onClick_HeaderBar', value);
+    this.headerText = value;
+    // this.isShowLeftNav = value;
+    this.isShowLeftNav = !this.isShowLeftNav;
+  }
 }
