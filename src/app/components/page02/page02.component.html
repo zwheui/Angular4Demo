@@ -1,30 +1,36 @@
+<div class="box-block">
+    <div id="MyDatePicker"></div>
+    <div id="MyDialog" hidden title="Basic dialog">
+        <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+    </div>
+    <button style="font-size:2em;padding: 10px 30px;" (click)="onClick_Dialog()">Pop up</button>
+</div>
 <div class="box-flex box-page02">
-  <div id="MyDatePicker"></div>
-  <h3>{{myDate | date: 'medium'}}</h3>
-  <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm.value)">
-    <div class="form-group box-flex">
-      <label>Name</label>
-      <input class="form-control" type="text" name="name" ngModel>
-    </div>
-    <div class="form-group box-flex">
-      <label>Email</label>
-      <input class="form-control" type="text" name="Email" ngModel>
-    </div>
-    <div ngModelGroup="address">
-      <div class="form-group box-flex">
-        <label>Email</label>
-        <input class="form-control" type="text" name="Country" ngModel>
-      </div>
-      <div class="form-group box-flex">
-        <label>City</label>
-        <input class="form-control" type="text" name="City" ngModel>
-      </div>
-      <div class="form-group box-flex">
-          <label>Street</label>
-          <input class="form-control" type="text" name="Street1" ngModel>
+    <h3>{{myDate | date: 'medium'}}</h3>
+    <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm.value)">
+        <div class="form-group box-flex">
+            <label>Name</label>
+            <input class="form-control" type="text" name="name" ngModel>
         </div>
-    </div>
-    <button type="submit">Submit</button>
-  </form>
-  <h4>{{postRetDate}}</h4>
+        <div class="form-group box-flex">
+            <label>Email</label>
+            <input class="form-control" type="text" name="Email" ngModel>
+        </div>
+        <div ngModelGroup="address">
+            <div class="form-group box-flex">
+                <label>Email</label>
+                <input class="form-control" type="text" name="Country" ngModel>
+            </div>
+            <div class="form-group box-flex">
+                <label>City</label>
+                <input class="form-control" type="text" name="City" ngModel>
+            </div>
+            <div class="form-group box-flex">
+                <label>Street</label>
+                <input class="form-control" type="text" name="Street1" ngModel>
+            </div>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <h4>{{postRetDate}}</h4>
 </div>

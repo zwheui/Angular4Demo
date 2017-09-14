@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpFetchService } from '../../services/http-fetch.service';
 declare var jquery: any;
 declare var $: any;
@@ -9,25 +9,30 @@ declare var $: any;
   styleUrls: ['./page02.component.scss'],
   providers: [HttpFetchService]
 })
-export class Page02Component implements AfterViewInit {
+export class Page02Component implements OnInit {
   myDate;
   postRetDate;
   constructor(
     private _httpSrv: HttpFetchService,
   ) { }
 
-  // ngOnInit() {
-  //   this.myDate = new Date();
-  // }
-  ngAfterViewInit() {
+  ngOnInit() {
+    this.myDate = new Date();
+    // $('#MyDatePicker').datepicker();
     $('#MyDatePicker').datepicker({
       changeMonth: true,
       changeYear: true,
       dateFormat: 'dd/mm/yy',
       onSelect: function (selectedDate) {
+        console.log(selectedDate);
+
         // $("#txtFilterDateTo").datepicker("option", "minDate", selectedDate);
       }
     });
+  }
+
+  onClick_Dialog() {
+    $('#MyDialog').dialog();
   }
 
   async onSubmit(formValue) {
