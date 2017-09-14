@@ -21,11 +21,12 @@
 .main-icon-link-inner {
     display: block;
     position: relative;
+    color: #D84C2B;
     i {
         font-size: 126px;
-        color: #D84C2B
+
     }
-    i:hover {
+    :hover {
         color: #7a1b1b;
     }
     height:100%;
