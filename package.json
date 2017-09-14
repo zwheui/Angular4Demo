@@ -1,6 +1,5 @@
 {
     "name": "angular4-demo",
-    "homepage": "https://zwheui.github.io/Angular4Demo",
     "version": "0.0.0",
     "license": "MIT",
     "scripts": {
@@ -10,7 +9,7 @@
         "test": "ng test",
         "lint": "ng lint",
         "e2e": "ng e2e",
-        "deploy": "ng build --bh /Angular4Demo/ --prod --aot=false && gh-pages -d dist"
+        "gh": "ng build --bh /Angular4Demo/ --prod --aot=false && gh-pages -d dist"
     },
     "private": true,
     "dependencies": {
@@ -23,11 +22,14 @@
         "@angular/platform-browser": "^4.2.4",
         "@angular/platform-browser-dynamic": "^4.2.4",
         "@angular/router": "^4.2.4",
-        "core-js": "^2.4.1",
-        "rxjs": "^5.4.2",
-        "zone.js": "^0.8.14",
         "angular2-fontawesome": "^0.9.3",
-        "font-awesome": "^4.7.0"
+        "core-js": "^2.4.1",
+        "font-awesome": "^4.7.0",
+        "gh-pages": "^1.0.0",
+        "jquery": "^3.2.1",
+        "normalize.css": "^7.0.0",
+        "rxjs": "^5.4.2",
+        "zone.js": "^0.8.14"
     },
     "devDependencies": {
         "@angular/cli": "1.3.2",
@@ -37,7 +39,6 @@
         "@types/jasminewd2": "~2.0.2",
         "@types/node": "~6.0.60",
         "codelyzer": "~3.1.1",
-        "gh-pages": "^1.0.0",
         "jasmine-core": "~2.6.2",
         "jasmine-spec-reporter": "~4.1.0",
         "karma": "~1.7.0",
