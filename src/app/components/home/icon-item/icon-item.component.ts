@@ -26,7 +26,7 @@ export class IconItemComponent implements OnInit {
 
     this.iconObjectList.push({
       Title: 'Schedule',
-      FontName: 'fa-tasks'
+      FontName: 'fa-pencil-square-o'
     });
   }
 
