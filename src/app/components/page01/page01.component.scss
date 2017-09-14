@@ -1,8 +1,22 @@
+@import '../../common/variables';
 .box-page01 {
-    flex-direction: column;
-    justify-content: space-between;
-    height: 2000px;
-    ul {
-        list-style: none;
+    .box-img {
+        justify-content: space-between;
+        font-size: 8em;
+        color: $primary;
+        text-align: center;
+        .fa-text+div {
+            font-size: 50%;
+            position: absolute;
+            margin: -95px 25px;
+        }
+        .fa-item {
+            color: $black;
+            margin-left: 20px;
+        }
+        .box-img-title {
+            color: $black;
+            font-size: 16px;
+        }
     }
 }
