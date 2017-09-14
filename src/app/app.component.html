@@ -1,112 +1,108 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <header>
-    <div class="header-left-panel">
-        <a class="header-logo-link white-color">
+  <div class="header-left-panel">
+    <a class="header-logo-link white-color">
             <img class="header-logo" src="./assets/img/pwclogo.png">
         </a>
-        <a class="header-left-bar-link white-color" (click)="ToggleLeftNav()">
+    <a class="header-left-bar-link white-color" (click)="ToggleLeftNav()">
             <i class="fa fa-bars fa-6" aria-hidden="true"></i>
         </a>
-    </div>
-    <div class="header-right-panel">
-        <a class="header-right-link white-color {{rightMenuToggleClass}}" (click)="ToggleRightMenu($event, 1)">
+  </div>
+  <div class="header-right-panel">
+    <a class="header-right-link white-color {{rightMenuToggleClass}}" (click)="ToggleRightMenu($event, 1)">
             Timo Yan
             <i class="fa fa-caret-down" aria-hidden="true"></i>
         </a>
-        <div class="header-right-menu {{rightMenuToggleClass}}">
-            <ul class="header-right-menu-group">
-                <li>
-                    <a>Settings
+    <div class="header-right-menu {{rightMenuToggleClass}}">
+      <ul class="header-right-menu-group">
+        <li>
+          <a>Settings
           </a>
-                </li>
-                <li>
-                    <a>Personal Meeting
+        </li>
+        <li>
+          <a>Personal Meeting
           </a>
-                </li>
-                <li>
-                    <a>Desktop Tools
+        </li>
+        <li>
+          <a>Desktop Tools
           </a>
-                </li>
-                <li>
-                    <a>Schedule For
+        </li>
+        <li>
+          <a>Schedule For
           </a>
-                </li>
-                <li>
-                    <a>Web Ex
+        </li>
+        <li>
+          <a>Web Ex
           </a>
-                </li>
-                <li>
-                    <a>Audio Config
+        </li>
+        <li>
+          <a>Audio Config
           </a>
-                </li>
-            </ul>
-        </div>
+        </li>
+      </ul>
     </div>
+  </div>
 </header>
 <div class="content-wrapper">
-    <div [@leftPanelToggleAnimation]="leftBarStatus.toString()" class="left-nav-wrapper {{leftNavToggleClass}}">
-        <nav class="left-nav">
-            <div class="left-nav-title">
-                <a (click)="LeftNavMenuToggle('MeetingCenter')">Meeting Center</a>
-            </div>
-            <div class="left-nav-group-container" [@leftNavMeetingCenterAnimation]="leftNavMeetingCenter">
-                <span class="left-nav-group-title">Meetings</span>
-                <ul class="left-nav-group">
-                    <li class="left-nav-group-item">
-                        <a>Meet Now</a>
-                    </li>
-                    <li class="left-nav-group-item">
-                        <a>Schedule</a>
-                    </li>
-                    <li class="left-nav-group-item">
-                        <a>My Calendar</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="left-nav-title">Reports</div>
-            <div class="left-nav-group-container closed">
-                <span class="left-nav-group-title">Reporting</span>
-                <ul class="left-nav-group">
-                    <li class="left-nav-group-item">
-                        <a>My Usage
+  <div [@leftPanelToggleAnimation]="leftBarStatus.toString()" class="left-nav-wrapper {{leftNavToggleClass}}">
+    <nav class="left-nav">
+      <div class="left-nav-title">
+        <a (click)="LeftNavMenuToggle('MeetingCenter')">Meeting Center</a>
+      </div>
+      <div class="left-nav-group-container" [@leftNavMeetingCenterAnimation]="leftNavMeetingCenter">
+        <span class="left-nav-group-title">Meetings</span>
+        <ul class="left-nav-group">
+          <li class="left-nav-group-item">
+            <a>Meet Now</a>
+          </li>
+          <li class="left-nav-group-item">
+            <a>Schedule</a>
+          </li>
+          <li class="left-nav-group-item">
+            <a>My Calendar</a>
+          </li>
+        </ul>
+      </div>
+      <div class="left-nav-title">Reports</div>
+      <div class="left-nav-group-container closed">
+        <span class="left-nav-group-title">Reporting</span>
+        <ul class="left-nav-group">
+          <li class="left-nav-group-item">
+            <a>My Usage
             </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="left-nav-title">Support</div>
-            <div class="left-nav-group-container closed">
-                <!-- <span class="left-nav-group-title"></span> -->
-                <ul class="left-nav-group">
-                    <li class="left-nav-group-item">
-                        <a>Contact
+          </li>
+        </ul>
+      </div>
+      <div class="left-nav-title">Support</div>
+      <div class="left-nav-group-container closed">
+        <!-- <span class="left-nav-group-title"></span> -->
+        <ul class="left-nav-group">
+          <li class="left-nav-group-item">
+            <a>Contact
             </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-    <div [@mainPanelToggleAnimation]="leftBarStatus.toString()" class="main-wrapper {{leftNavToggleClass}}">
-        <main>
-            <app-icon-list class="main-icon-list"></app-icon-list>
-            <div class="main-content">
-                <h2>Welcome to the Communication Services Portal</h2>
-                <p>Warning: Sharing personal, firm, or client confidential information can put the firm at risk. All WebEx usage must conform to local laws concerning client confidentiality, data protection and privacy as well as data protection, privacy
-                    and risk policies. As a meeting host you are responsible for ensuring compliance and making meeting participants aware of their confidentiality responsibilities. The use of Computer Based Audio (VOIP) may not be acceptable in some
-                    territories. If you have any questions, or need further information or guidance regarding the information that you will be using during your event, please contact your local Risk Management office.</p>
-                <h2>Learn more about WebEx</h2>
-                Join the
-                <a target="_blank" href="https://pwc-spark.com/groups/pwcit-communication-services">Communication
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div [@mainPanelToggleAnimation]="leftBarStatus.toString()" class="main-wrapper {{leftNavToggleClass}}">
+    <main>
+      <app-icon-list class="main-icon-list"></app-icon-list>
+      <div class="main-content">
+        <h2>Welcome to the Communication Services Portal</h2>
+        <p>Warning: Sharing personal, firm, or client confidential information can put the firm at risk. All WebEx usage must
+          conform to local laws concerning client confidentiality, data protection and privacy as well as data protection,
+          privacy and risk policies. As a meeting host you are responsible for ensuring compliance and making meeting participants
+          aware of their confidentiality responsibilities. The use of Computer Based Audio (VOIP) may not be acceptable in
+          some territories. If you have any questions, or need further information or guidance regarding the information
+          that you will be using during your event, please contact your local Risk Management office.</p>
+        <h2>Learn more about WebEx</h2>
+        Join the
+        <a target="_blank" href="https://pwc-spark.com/groups/pwcit-communication-services">Communication
                   Services Spark Group
                   </a> to ask questions, share best practices and get the latest information.
-                <footer>
-                    <div>
-                        <p>Copyright © 2017</p>
-                    </div>
-                    <div>
-                        PricewaterhouseCoopers. All rights reserved. PricewaterhouseCoopers refers to the network of member firms
-                        <br _ngcontent-c0=""> of PricewaterhouseCoopers International Limited, each of which is a separate and independent legal entity.</div>
-                </footer>
-            </div>
-        </main>
-    </div>
+        <app-my-footer></app-my-footer>
+      </div>
+    </main>
+  </div>
 </div>
