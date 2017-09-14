@@ -39,7 +39,25 @@ import {
       state('true', style({
 
       })),
-      transition('false <=> true', animate('500ms ease-in'))
+      transition('false <=> true', animate('300ms ease-in'))
+    ]),
+    trigger('leftNavReportsAnimation', [
+      state('false', style({
+        height: '0px'
+      })),
+      state('true', style({
+
+      })),
+      transition('false <=> true', animate('300ms ease-in'))
+    ]),
+    trigger('leftNavSupportAnimation', [
+      state('false', style({
+        height: '0px'
+      })),
+      state('true', style({
+
+      })),
+      transition('false <=> true', animate('300ms ease-in'))
     ])
   ]
 })
@@ -49,6 +67,8 @@ export class AppComponent implements OnInit {
   rightMenuStatus: Boolean;
   rightMenuToggleClass: string;
   leftNavMeetingCenter: string;
+  leftNavReports: string;
+  leftNavSupport: string;
 
   ngOnInit() {
     this.rightMenuToggleClass = '';
@@ -56,6 +76,8 @@ export class AppComponent implements OnInit {
     this.leftNavToggleClass = 'toggle';
     this.leftBarStatus = true;
     this.leftNavMeetingCenter = 'true';
+    this.leftNavReports = 'false';
+    this.leftNavSupport = 'false';
   }
 
   constructor() {
@@ -83,10 +105,33 @@ export class AppComponent implements OnInit {
   }
 
   LeftNavMenuToggle(titleName: string): void {
-    if (this.leftNavMeetingCenter === 'true') {
+    if (titleName === 'MeetingCenter') {
+      if (this.leftNavMeetingCenter === 'true') {
+        this.leftNavMeetingCenter = 'false';
+      } else {
+        this.leftNavMeetingCenter = 'true';
+      }
+
+      this.leftNavReports = 'false';
+      this.leftNavSupport = 'false';
+    } else if (titleName === 'Reports') {
+      if (this.leftNavReports === 'true') {
+        this.leftNavReports = 'false';
+      } else {
+        this.leftNavReports = 'true';
+      }
+
       this.leftNavMeetingCenter = 'false';
-    } else {
-      this.leftNavMeetingCenter = 'true';
+      this.leftNavSupport = 'false';
+    } else if (titleName === 'Support') {
+      if (this.leftNavSupport === 'true') {
+        this.leftNavSupport = 'false';
+      } else {
+        this.leftNavSupport = 'true';
+      }
+
+      this.leftNavMeetingCenter = 'false';
+      this.leftNavReports = 'false';
     }
   }
 

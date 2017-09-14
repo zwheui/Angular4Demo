@@ -53,32 +53,44 @@
         <span class="left-nav-group-title">Meetings</span>
         <ul class="left-nav-group">
           <li class="left-nav-group-item">
-            <a>Meet Now</a>
+            <a>
+              <h5>Meet Now</h5>
+            </a>
           </li>
           <li class="left-nav-group-item">
-            <a>Schedule</a>
+            <a>
+                <h5>Schedule</h5>
+            </a>
           </li>
-          <li class="left-nav-group-item">
-            <a>My Calendar</a>
-          </li>
-        </ul>
-      </div>
-      <div class="left-nav-title">Reports</div>
-      <div class="left-nav-group-container closed">
-        <span class="left-nav-group-title">Reporting</span>
-        <ul class="left-nav-group">
-          <li class="left-nav-group-item">
-            <a>My Usage
+          <li class="left-nav-group-item last">
+            <a>
+              <h5>My Calendar</h5>
             </a>
           </li>
         </ul>
       </div>
-      <div class="left-nav-title">Support</div>
-      <div class="left-nav-group-container closed">
+      <div class="left-nav-title">
+          <a (click)="LeftNavMenuToggle('Reports')">Reports</a>
+      </div>
+      <div class="left-nav-group-container" [@leftNavReportsAnimation]="leftNavReports">
+        <span class="left-nav-group-title">Reporting</span>
+        <ul class="left-nav-group">
+          <li class="left-nav-group-item last">
+            <a>
+              <h5>My Usage</h5>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="left-nav-title">
+        <a (click)="LeftNavMenuToggle('Support')">Support</a>
+      </div>
+      <div class="left-nav-group-container" [@leftNavSupportAnimation]="leftNavSupport">
         <!-- <span class="left-nav-group-title"></span> -->
         <ul class="left-nav-group">
-          <li class="left-nav-group-item">
-            <a>Contact
+          <li class="left-nav-group-item last no-title">
+            <a>
+              Contact
             </a>
           </li>
         </ul>
