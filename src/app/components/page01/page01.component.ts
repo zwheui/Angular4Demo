@@ -8,7 +8,7 @@ import { HttpFetchService } from '../../services/http-fetch.service';
   providers: [HttpFetchService],
 })
 export class Page01Component implements OnInit {
-  pageData;
+  pageData = {};
 
   constructor(
     private _httpSrv: HttpFetchService
