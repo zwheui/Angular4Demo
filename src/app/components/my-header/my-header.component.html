@@ -11,11 +11,12 @@
 
     <div class="box-menu box-list box-ct">
         <ul>
-            <li class="box-cursor a-nostyle" *ngFor="let item of menuList">
-                <a *ngIf="item.href;else a_routerlink" [href]="item.href">{{item.name}}</a>
+            <li class="box-cursor a-nostyle" *ngFor="let item of pageData">
+                <!-- <a *ngIf="item.href;else a_routerlink" [href]="item.href">{{item.name}}</a>
                 <ng-template #a_routerlink>
                     <a [routerLink]="[item.routerLink]" [queryParams]="item.queryParams">{{item.name}}</a>
-                </ng-template>
+                </ng-template> -->
+                <app-my-link [item]="item"></app-my-link> 
             </li>
         </ul>
     </div>

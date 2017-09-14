@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { MyHttpService } from "../../my-http.service";
+import { HttpFetchService } from '../../services/http-fetch.service';
 
 @Component({
   selector: 'app-page02',
   templateUrl: './page02.component.html',
   styleUrls: ['./page02.component.scss'],
-  providers: [MyHttpService]
+  providers: [HttpFetchService]
 })
 export class Page02Component implements OnInit {
   myDate;
   constructor(
-    private _httpSrv: MyHttpService,
+    private _httpSrv: HttpFetchService,
   ) { }
 
   ngOnInit() {

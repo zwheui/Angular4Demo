@@ -1,8 +1,40 @@
 @import '../../common/variables';
-
 .box-left-nav {
-  height: 100%;
-  border-right: 1px solid;
-  border-color: $primary;
+    height: 100%;
+    border-right: 1px solid;
+    border-color: $primary;
+    width: 250px;
 
+    @media (max-width: 600px) {
+      display: none;
+    }
+    .nav-item-head {
+        margin: 5px 0;
+        color: $black;
+        background: #f5f5f5;
+        background-image: linear-gradient(to bottom, #f5f5f5 0, #e8e8e8 100%);
+    }
+    .nav-item-head,
+    .nav-item-title {
+        padding: 10px 15px;
+    }
+    .nav-item-title,
+    .nav-item-child-item {
+        border-bottom: 1px solid;
+    }
+    .nav-item-child-item {
+        padding: 10px 30px;
+        font-size: 14px;
+    }
+    .nav-item-head,
+    .nav-item-title,
+    .nav-item-child-item {
+        border-color: #ddd;
+    }
+    .nav-item:hover {
+        text-decoration: underline;
+    }
+    .nav-item-child {
+        transition: $speed_default;
+    }
 }

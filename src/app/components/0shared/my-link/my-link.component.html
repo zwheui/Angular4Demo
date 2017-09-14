@@ -1,0 +1,4 @@
+<a *ngIf="item.href;else a_routerlink" [href]="item.href">{{item.name}}</a>
+<ng-template #a_routerlink>
+    <a [routerLink]="[item.routerLink]" [queryParams]="item.queryParams">{{item.name}}</a>
+</ng-template>

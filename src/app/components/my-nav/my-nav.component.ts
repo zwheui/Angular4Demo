@@ -1,24 +1,26 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { trigger, state, style, transition, animate, keyframes } from '@angular/animations';
-import { MyHttpService } from '../../my-http.service';
+import { HttpFetchService } from '../../services/http-fetch.service';
+import { INavItem } from '../../my-interface';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-my-nav',
   templateUrl: './my-nav.component.html',
   styleUrls: ['./my-nav.component.scss'],
-  providers: [MyHttpService],
+  providers: [HttpFetchService],
   animations: [
     trigger('myAnimationEC', [
 
       state('true', style({
         transform: 'translate(0,0)',
         opacity: 1,
-        // display: 'inherit'
+        display: 'block'
       })),
       state('false', style({
-        transform: 'translate(-20vw,0)',
+        transform: 'translate(-250px,0)',
         opacity: 0,
-        // display: 'none'
+        display: 'none'
       })),
 
       transition('true <=> false', animate('800ms ease-in')),
@@ -27,58 +29,38 @@ import { MyHttpService } from '../../my-http.service';
 })
 
 export class MyNavComponent implements OnInit {
-  pageData: IMyNav[];
-  leftNavList = ['title 01', 'title 02', 'title 03'];
   @Input() isShow = true;
 
+  pageData: INavItem[];
+
   constructor(
-    private _httpSrv: MyHttpService,
+    private _route: ActivatedRoute,
+    private _httpSrv: HttpFetchService,
   ) { }
 
   ngOnInit() {
-    // this.leftNavList = this._httpSrv.onLoadData();
-    // this.onLoadData();
+    this.loadPageData();
   }
 
-  // async onLoadData() {
-  //   // const url = 'http://jsonplaceholder.typicode.com/posts';
-  //   const url = 'https://my-json-server.typicode.com/zwheui/jsondata/comments';
-  //   const header = {
-  //     method: 'get',
-  //     // headers: {
-  //     //   "Content-type":"application/x-www-form-urlencoded"
-  //     // },
-  //   };
+  async loadPageData() {
+    this.pageData = await this._httpSrv.getJSON('navItemList');
 
-  //   try {
-  //     const res = await fetch(url, header);
-  //     const data = await res.json();
-  //     // console.log(data.slice(0, 5));
-  //     data.slice(0, 4).map((item, index) => {
-  //       console.log(item);
-  //     });
+    // this.pageData = await this._httpSrv.getHttp('navItemList');
 
-  //     this.leftNavList = data.slice(0, 10).map(item => item.body);
+    // get Param and update pageData
+    const selNavItem = this._route.snapshot.queryParams['navItem'];
 
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
+    if (selNavItem) {
+      this.pageData.map(item => {
+        item.isShow = item.link.name === selNavItem;
+      });
+    }
+  }
 
-  //   fetch(url).then((res) => {
-  //     // console.log(res.json());
-  //     return res.json();
-  //   }).then((data) => {
-  //     console.log(data);
-  //   }).catch((err) => {
-  //     console.log(err);
-  //   });
-  // }
-
+  onClick_NavItem(item) {
+    item.isShow = !item.isShow;
+  }
 }
 
-interface IMyNav {
-  title: string;
-  childNav: IMyNav[];
-}
 
 

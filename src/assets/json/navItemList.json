@@ -1,0 +1,65 @@
+[
+
+    {
+        "link": {
+            "name": "Meeting Center"
+        },
+        "isShow": true,
+        "title": "Meetings",
+        "childItemList": [
+
+            {
+                "link": {
+                    "name": "Meeting Now",
+                    "routerLink": "page01"
+                }
+            }, {
+                "link": {
+                    "name": "Schedule",
+                    "routerLink": "page02"
+                }
+            }, {
+                "link": {
+                    "name": "My Calendar",
+                    "routerLink": "calendar"
+                }
+            }, {
+                "link": {
+                    "name": "Find Events",
+                    "routerLink": "event",
+                    "queryParams": {
+                        "navItem": "Meeting Center"
+                    }
+                }
+            }
+        ]
+    }, {
+        "link": {
+            "name": "Reports"
+        },
+        "title": "Reporting",
+        "childItemList": [
+
+            {
+                "link": {
+                    "name": "My Usage",
+                    "routerLink": "usage"
+                }
+            }
+        ]
+    }, {
+        "link": {
+            "name": "Support"
+        },
+        "hideTitle": true,
+        "childItemList": [
+
+            {
+                "link": {
+                    "name": "Contact",
+                    "routerLink": "pagexx"
+                }
+            }
+        ]
+    }
+]

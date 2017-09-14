@@ -13,7 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     routingComponents,
-    CtrlDemoDirective
+    CtrlDemoDirective,
   ],
   imports: [
     BrowserModule,

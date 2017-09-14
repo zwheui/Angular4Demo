@@ -8,6 +8,7 @@ import { CtrlBGColorDirective } from './directives/ctrl-bgcolor.directive';
 import { CtrlHideDirective } from './directives/ctrl-hide.directive';
 import { Page02Component } from './components/page02/page02.component';
 import { MyNavComponent } from './components/my-nav/my-nav.component';
+import { MyLinkComponent } from './components/0shared/my-link/my-link.component';
 
 
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
@@ -54,4 +55,5 @@ export const routingComponents = [
   CtrlBGColorDirective,
   CtrlHideDirective,
   MyNavComponent,
+  MyLinkComponent
 ];

@@ -1,7 +1,20 @@
-<div [@myAnimationEC]="isShow.toString()" class="box-left-nav box-ct box-flex">
-  <ul>
-    <li *ngFor="let item of leftNavList; let i = index;">
-      {{(i+1).toString()}} {{item}}
-    </li>
-  </ul>
+<!-- <div class="box-left-nav box-ct box-flex box-list" [@myAnimationEC]="isShow.toString()"> -->
+<div [class.box-hidden]="!isShow" class="box-left-nav box-ct box-flex box-list">
+    <ul>
+        <li *ngFor="let item of pageData; let i = index;">
+            <div (click)="onClick_NavItem(item)" class="nav-item-head box-ct box-cursor">{{item.link.name}}</div>
+            <div *ngIf="item.isShow" class="nav-item-child">
+                <div *ngIf="!item.hideTitle" class="nav-item-title">
+                    <b>{{item.title}}</b>
+                </div>
+                <div class="nav-item-child-list">
+                    <ul>
+                        <li class="nav-item-child-item" *ngFor="let navItem of item.childItemList">
+                            <app-my-link [item]="navItem.link"></app-my-link>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+    </ul>
 </div>
