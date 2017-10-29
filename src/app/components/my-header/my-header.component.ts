@@ -2,6 +2,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { trigger, state, style, transition, animate, keyframes } from '@angular/animations';
 import { HttpFetchService } from '../../services/http-fetch.service';
 import { ILink } from '../../my-interface';
+import { menu } from '../../common/const';
 
 @Component({
   selector: 'app-my-header',
@@ -38,8 +39,10 @@ export class MyHeaderComponent implements OnInit {
   }
 
   async loadPageData() {
-    // this.pageData = await this._httpSrv.getJSON('menu');
-    this.pageData = await this._httpSrv.getHttp('menu');
+    this.pageData = await this._httpSrv.getJSON('menu');
+    // this.pageData = menu;
+    
+    // this.pageData = await this._httpSrv.getHttp('menu');
   }
 
   onClick() {

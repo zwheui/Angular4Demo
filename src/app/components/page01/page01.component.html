@@ -1,7 +1,7 @@
 <div class="box-page01">
     <div class="box-img box-flex">
         <div class="box-cursor" *ngFor="let item of pageData.imgLinkList">
-            <i class="fa" [ngClass]="item.iconClass" aria-hidden="true">
+            <i class="fa" [class.my-classname]="false" [ngClass]="item.iconClass" aria-hidden="true">
             </i>
             <div *ngIf="item.iconText">{{item.iconText}}</div>
             <div class="box-img-title">{{item.title}}</div>

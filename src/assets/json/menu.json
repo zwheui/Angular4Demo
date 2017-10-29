@@ -1,7 +1,7 @@
 [
 
     {
-        "name": "Settings",
+        "name": "Settings1",
         "href": "/settings"
     },
     {
@@ -9,7 +9,8 @@
         "routerLink": "pMeeting",
         "queryParams": {
             "param01": true,
-            "param02": "abc"
+            "param02": "abc",
+            "param03": 3
         }
     }, {
         "name": "Desktop Tools",

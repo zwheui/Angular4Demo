@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpFetchService } from '../../services/http-fetch.service';
-declare var jquery: any;
+// declare var jquery: any;
 declare var $: any;
 
 @Component({
@@ -10,11 +10,20 @@ declare var $: any;
   providers: [HttpFetchService]
 })
 export class Page02Component implements OnInit {
+  mystring: string;
+  myNumber: number;
+  myBool: boolean;
+  myObj: object;
+  myArrayString: (string | number)[];
+  myArray: any[];
   myDate;
   postRetDate;
   constructor(
     private _httpSrv: HttpFetchService,
-  ) { }
+  ) {
+    this.myArray = [1, 'abc', {}];
+    this.myArrayString = [1, 'abc'];
+  }
 
   ngOnInit() {
     this.myDate = new Date();
